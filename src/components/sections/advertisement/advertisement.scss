@@ -1,0 +1,109 @@
+.advertisement {
+    &__block-left {
+        width: 14.8rem;
+        height: 14.8rem;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        @media (min-width: 768px) {
+            min-width: 14.8rem;
+            align-self: center;
+            margin-bottom: 0;
+        }
+        @media (min-width: 1024px) {
+            min-width: 26.3rem;
+            max-width: 26.3rem;
+            height: 26.3rem;
+            align-self: center;
+            margin-bottom: 0;
+        }
+    }
+}
+.advertisement__block {
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(81, 106, 124, 0.15);
+    border-radius: 8px;
+    border-top: 8px solid #ff2e1a;
+    padding: 4.8rem 1.5rem 5.6rem;
+    @media (min-width: 768px) {
+        display: flex;
+        gap: 2rem;
+    }
+    @media (min-width: 1024px) {
+        padding: 6.8rem 7rem 7.6rem;
+        gap: 6rem;
+    }
+    @media (min-width: 1170px) {
+        padding: 8.8rem 9rem 9.6rem;
+        gap: 9.4rem;
+    }
+    h2 {
+        @media (min-width: 1024px) {
+            font-size: 4.8rem;
+            line-height: 62px;
+        }
+    }
+    p {
+        color: #242f4d;
+        @media (min-width: 1024px) {
+            max-width: 44rem;
+            text-align: left;
+        }
+    }
+    .button-wrapper {
+        margin-top: 3rem;
+        @media (min-width: 630px) {
+            justify-content: center;
+            flex-direction: row;
+        }
+        @media (min-width: 768px) {
+            justify-content: flex-start;
+        }
+    }
+    .btn {
+        padding: 1.2rem 2rem;
+        @media (min-width: 1440px) {
+            padding: 1.2rem 3.2rem;
+        }
+    }
+    .btn-green {
+        color: #ffffff;
+    }
+}
+.podpiska {
+    &__block {
+        border-top: 8px solid #2a8cff;
+    }
+    .podpiska__block-left,
+    .advertisement__block-right {
+        @media (min-width: 1024px) {
+            width: 50%;
+        }
+    }
+    .podpiska__block-left {
+        margin-bottom: 4rem;
+        @media (min-width: 768px) {
+            max-width: 50%;
+            margin-bottom: 0;
+        }
+    }
+    .advertisement__block-right {
+        @media (min-width: 768px) {
+            max-width: 32.7rem;
+            align-self: center;
+            margin-left: auto;
+        }
+    }
+    h2 {
+        @media (min-width: 1024px) {
+            font-size: 3.6rem;
+            line-height: 48px;
+            margin-bottom: 2.4rem;
+        }
+    }
+    .form label {
+        margin-bottom: 3.2rem;
+    }
+    .btn {
+        width: 100%;
+    }
+}

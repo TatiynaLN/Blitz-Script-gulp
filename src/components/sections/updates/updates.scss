@@ -1,0 +1,273 @@
+.section-update {
+    padding-top: 2.6rem;
+    padding-bottom: 5.6rem;
+    h1 {
+        margin-bottom: 3rem;
+        text-align: left;
+        margin-right: auto;
+        font-size: 2.4rem;
+        line-height: 32px;
+        @media (min-width: 1024px) {
+            font-size: 4.8rem;
+            line-height: 62px;
+        }
+    }
+}
+.update__wrap {
+    @media (min-width: 900px) {
+        display: flex;
+        gap: 2.4rem;
+    }
+}
+.update__block {
+    padding: 1.6rem;
+    width: 100%;
+    max-width: 75.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0px 0px 25px rgba(81, 106, 124, 0.15);
+    border-radius: 8px;
+    @media (min-width: 1024px) {
+        padding: 3.2rem;
+    }
+    .h4,
+    .h3 {
+        margin-bottom: 1.2rem;
+        width: 100%;
+    }
+    .h3 {
+        @media (min-width: 1024px) {
+            margin-bottom: 2.4rem;
+        }
+    }
+    p {
+        color: #242f4d;
+        text-align: left;
+        margin-bottom: 1.2rem;
+        @media (min-width: 1024px) {
+            margin-bottom: 6rem;
+        }
+    }
+    time,
+    span {
+        @include Montserrat-Regular;
+        font-size: 1.4rem;
+        line-height: 16px;
+        color: #757575;
+    }
+}
+.update__block-img {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 69rem;
+    min-width: 25.8rem;
+    min-height: 18.8rem;
+    margin-bottom: 0.8rem;
+    background: url("../img/zaglushca.jpg") 100% 100% / cover no-repeat;
+    background-position: center;
+    overflow: hidden;
+    @media (min-width: 1024px) {
+        margin-bottom: 3.2rem;
+        min-height: 38.9rem;
+    }
+    img {
+        height: 100%;
+        min-height: 18.8rem;
+        min-width: 100%;
+    }
+}
+.update__block-bottom,
+.update__block-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    span {
+        position: relative;
+        padding-left: 0.5rem;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 1.8rem;
+            height: 1.2rem;
+            background: url("../img/icons/glaz.svg") 100% 100% / cover no-repeat;
+            background-position: center;
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+        }
+    }
+}
+.update__block-top {
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    @media (min-width: 1024px) {
+        display: none;
+    }
+    a {
+        margin-right: auto;
+    }
+}
+.update__block-bottom {
+    margin-top: auto;
+    justify-content: flex-end;
+    span,
+    time {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+            padding: 0.5rem;
+        }
+    }
+    time {
+        @media (min-width: 1024px) {
+            margin-right: 4.7rem;
+        }
+    }
+    a {
+        @include Montserrat-Bold;
+        margin-right: auto;
+        line-height: 24px;
+        color: #2a8cff;
+        transition: all 0.3s;
+        &:hover,
+        &:focus {
+            transition: all 0.3s;
+            color: #02bf7f;
+        }
+    }
+}
+.section-updates {
+    padding-bottom: 5.6rem;
+    @media (min-width: 1024px) {
+        padding-bottom: 9rem;
+    }
+}
+.updates__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 3.2rem;
+    @media (min-width: 1024px) {
+        padding-bottom: 4.4rem;
+    }
+    .update__block {
+        @media (min-width: 625px) {
+            width: 48.7%;
+        }
+        @media (min-width: 768px) {
+            width: 48.98%;
+        }
+        @media (min-width: 861px) {
+            width: 49.1%;
+        }
+        @media (min-width: 930px) {
+            width: 32.22%;
+        }
+        @media (min-width: 1440px) {
+            width: 32.45%;
+        }
+    }
+}
+.sidebar__update,
+.updates__wrap {
+    .update__block {
+        background: #ffffff;
+        box-shadow: 0px 0px 10px rgba(81, 106, 124, 0.25);
+        border-radius: 8px;
+    }
+    .update__block-img {
+        width: 100%;
+        height: auto;
+        min-height: 18.8rem;
+        max-height: 18.8rem;
+        flex: 1;
+        @media (min-width: 1024px) {
+            margin-bottom: 2rem;
+            min-height: 20.5rem;
+            max-height: 20.5rem;
+        }
+        img {
+            min-height: 100%;
+        }
+    }
+    .update__block-bottom {
+        @media (min-width: 1024px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1.6rem;
+        }
+    }
+    p {
+        @media (min-width: 1024px) {
+            font-size: 1.6rem;
+            margin-bottom: 1.6rem;
+        }
+    }
+}
+.section-update2 {
+    @media (min-width: 1024px) {
+        padding-bottom: 9rem;
+    }
+    .update__wrap {
+        @media (min-width: 1100px) {
+            display: flex;
+            gap: 12.8rem;
+        }
+        .update__block {
+            padding: 1.6rem;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0px;
+        }
+        .sidebar__update .update__block {
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(81, 106, 124, 0.25);
+            border-radius: 8px;
+        }
+        .update__block-top {
+            @media (min-width: 1024px) {
+                display: flex;
+                margin-bottom: 3.2rem;
+            }
+        }
+        .update__block-img {
+            margin-bottom: 1.6rem;
+        }
+        .h3 {
+            margin-bottom: 1.6rem;
+        }
+        p,
+        ul {
+            margin-bottom: 0;
+        }
+        li {
+            font-size: 1.8rem;
+            line-height: 24px;
+            color: #242f4d;
+            margin-bottom: 0.8rem;
+        }
+        .button-wrapper .btn-green {
+            color: #ffffff;
+            span {
+                @include Montserrat-SemiBold;
+                padding-right: 0.4rem;
+            }
+        }
+        .btn-border {
+            span {
+                padding-left: 0.4rem;
+            }
+        }
+        .btn {
+            padding: 1.2rem 2.6rem;
+        }
+    }
+}
+.button-wrapper .btn {
+    span {
+        @include Montserrat-SemiBold;
+    }
+}

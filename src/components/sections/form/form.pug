@@ -1,0 +1,17 @@
+section.section-form.fag-form.p-t-b1 
+    .container 
+        .fag-form__wrap
+            h2 Остались еще вопросы?
+            p Информация о том, что мы ответим на интересующие Вас вопросы.
+            form.form(method="post" action="#")
+                label(for="login") 
+                    span Логин
+                    input._req#login(type="text" name='user-login' placeholder="Введите Ваш логин" required="required")
+                label(for="email") 
+                    span E-mail
+                    input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                label(for="text") 
+                    span Текст сообщения
+                    textarea#text(name="quiz-message" placeholder="Напишите Ваш вопрос" required="required")
+                div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+                a.btn.btn-green.btn-thanks(href="") Отправить вопрос

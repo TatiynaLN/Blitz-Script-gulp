@@ -1,0 +1,26 @@
+.breadcrumbs {
+    display: none;
+    align-self: flex-start;
+
+    @media screen and (min-width: 1024px) {
+        display: block;
+    }
+}
+.breadcrumbs__item {
+    a {
+        @include Montserrat-Regular;
+        font-size: 1.2rem;
+        line-height: 24px;
+        color: #9f8a81;
+        display: inline;
+    }
+}
+.cont {
+    width: 100%;
+    max-width: calc(114rem + 3rem); // Максимальная ширина контейнера с учетом паддингов (2 х 1.5rem)
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

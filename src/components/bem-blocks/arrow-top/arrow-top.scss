@@ -1,0 +1,46 @@
+.top-arrow {
+    position: fixed;
+    z-index: 8000;
+    bottom: 44.2rem;
+    right: 2.5rem;
+    opacity: 0;
+    width: 3.2rem;
+    height: 3.2rem;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    background: #02bf7f;
+    will-change: opacity;
+    transition: opacity 0.5s ease-out;
+    visibility: hidden;
+    @media (min-width: 1024px) {
+        visibility: visible;
+        width: 5.4rem;
+        height: 5.4rem;
+    }
+
+    @media (min-width: 1600px) {
+        right: 11%;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        // transform: rotate(-45deg);
+        width: 1.48rem;
+        height: 0.867rem;
+        // border-top: 0.2rem solid #fff;
+        // border-right: 0.2rem solid #fff;
+        background-image: url("../img/icons/arrow.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+    }
+
+    &--show {
+        opacity: 1;
+    }
+}

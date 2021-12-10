@@ -1,0 +1,154 @@
+.accordion {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 2.6rem;
+}
+
+// Блоки аккардиона
+.accordion .accordion-block {
+  position: relative;
+  width: 100%;
+  padding: 0rem 1.6rem 0rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(81, 106, 124, 0.15);
+  border-radius: 8px;
+  margin-bottom: 1.6rem;
+  border: 1px solid transparent;
+  transition: all 0.4s;
+  @media (min-width: 1024px) {
+    padding: 0rem 2.4rem 0rem;
+    margin-bottom: 3rem;
+  }
+  &:hover,
+  &:focus {
+    transition: all 0.4s;
+    border: 1px solid #02bf7f;
+  }
+  // Горизонтальные линии между блоками аккардиона
+  &::after,
+  &:last-of-type::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    @media (min-width: 1024px) {
+      height: 0.3rem;
+    }
+  }
+
+  &::after {
+    top: 0;
+  }
+
+  &:last-of-type {
+    &::before {
+      bottom: 0;
+
+      @media (min-width: 1024px) {
+        bottom: -0.3rem;
+      }
+
+      @media (min-width: 1440px) {
+        bottom: -3.3rem;
+      }
+    }
+  }
+}
+
+// Заголовки аккардиона
+.accordion h3 {
+  position: relative;
+  margin: 0;
+  text-align: left;
+  padding-left: 1.5rem;
+  padding: 2.7rem 7.2rem 2.7rem 0;
+  font-size: 1.6rem;
+  line-height: 20px;
+  color: #242f4d;
+
+  @media (min-width: 1024px) {
+    padding-left: 0;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    padding: 3.2rem 7.2rem 3.2rem 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+  }
+
+  // Крестик, стрелочка или что-то иное меняющееся при открытии аккардиона
+  &::after {
+    right: 2.4rem;
+
+    width: 1.6rem;
+    height: 0.9rem;
+    background: url("../img/icons/arrow2.svg") 100% 100% / cover no-repeat;
+    will-change: transform;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    transition: -webkit-transform 0.5s linear;
+    transition: transform 0.5s linear;
+    transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  }
+}
+.accordion .accordion-block.active {
+  position: relative;
+  width: 100%;
+  padding: 0rem 1.6rem 1.6rem;
+  @media (min-width: 1024px) {
+    padding: 0rem 2.4rem 3.2rem;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid transparent;
+  }
+}
+.accordion .accordion-block.active h3 {
+  border-bottom: 0.5px solid #9cc4f0;
+}
+.accordion .accordion-block.active h3::after {
+  -webkit-transform: translateY(-50%) rotate(180deg) !important;
+  transform: translateY(-50%) rotate(180deg) !important;
+}
+
+// Текст в блоках аккардиона
+.accordion .accordion-block__box {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  will-change: auto;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  text-align: left;
+  @media (min-width: 1024px) {
+    max-width: 90%;
+  }
+  p {
+    color: #242f4d;
+    text-align: left;
+  }
+  @media (min-width: 1024px) {
+    font-size: 1.6rem;
+    line-height: 24px;
+  }
+}
+
+.accordion .accordion-block__box.active {
+  opacity: 1;
+  padding: 2.4rem 0rem 0rem;
+}

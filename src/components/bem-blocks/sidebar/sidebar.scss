@@ -1,0 +1,39 @@
+.sidebar {
+    width: 100%;
+    max-width: 36.1rem;
+    display: none;
+    @media (min-width: 900px) {
+        display: block;
+    }
+    aside {
+        padding: 2.4rem 0;
+        border-top: 2px solid #e0e7ed;
+        &:first-child {
+            padding-bottom: 4.8rem;
+            border-top: none;
+        }
+        a {
+            @include Montserrat-Bold;
+            font-size: 1.8rem;
+            line-height: 24px;
+            color: #242f4d;
+            transition: all 0.4s;
+            &:hover,
+            &:focus {
+                color: #2a8cff;
+                transition: all 0.4s;
+            }
+        }
+    }
+}
+.sidebar__update {
+    margin-top: 4rem;
+    .update__block-img {
+        img {
+            min-height: 100%;
+            @media (min-width: 900px) {
+                height: 20.5rem;
+            }
+        }
+    }
+}

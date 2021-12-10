@@ -1,0 +1,53 @@
+.main-section {
+    .wrap {
+        width: 100%;
+        @media (min-width: 900px) {
+            max-width: 80%;
+            margin-right: auto;
+        }
+        @media (min-width: 1024px) {
+            max-width: 55%;
+        }
+    }
+    h1,
+    h2,
+    p {
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 2.4rem;
+        line-height: 32px;
+        margin-bottom: 3rem;
+        color: #242f4d;
+        @media (min-width: 1024px) {
+            font-size: 4.8rem;
+            line-height: 62px;
+        }
+    }
+    h2 {
+        font-size: 1.8rem;
+        line-height: 20px;
+        @media (min-width: 1024px) {
+            font-size: 3.6rem;
+            line-height: 48px;
+        }
+    }
+    p {
+        text-align: left;
+        color: #242f4d;
+    }
+    a {
+        @include Montserrat-SemiBold;
+        display: inline-block;
+        color: #02bf7f;
+        @media (min-width: 1024px) {
+            text-decoration-line: underline;
+            transition: text-decoration 0.4s;
+            &:hover,
+            &:focus {
+                transition: text-decoration 0.4s;
+                text-decoration: none;
+            }
+        }
+    }
+}

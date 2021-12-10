@@ -1,0 +1,43 @@
+
+.overlay
+    .modal
+        .modal__content
+            span.close-modal +
+            h1 Покупка модуля
+                span.blue «Telegram бот для хайпа» 
+            p К Вам на почту придет письмо с архивом и инструкцией по установке модуля «Telegram бот» 
+            p Цена: 
+                span.blue 299$
+            form.form.form2(method="post" action="#")
+                label(for="email") 
+                    span Ваш E-mail
+                    input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                label.label-select(for="platej") Платежная система
+                .select-wrapper.select-wrapper--bottom
+                    select(required="required").turnintodropdown
+                            option(value="") Выберите платежную систему
+                            option Платежная система 1
+                            option Платежная система 2
+                div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+            button.btn.btn-gren(type="submit") Купить модуль
+    .modal2
+        .modal__content
+            span.close-modal +
+            h1 Покупка модуля
+                span.blue «Telegram бот для хайпа» 
+            .modal__img: img(src="./wp-content/themes/Blitz-Script/assets/img/telegram.png", alt="telegram")
+            h3 Бот «Telegram»
+            p Персонализированное приложение для телеграмм, которое умеет автоматически, по команде или заданному расписанию выполняет разные действия: предоставлять реферальную ссылку; настраивать свои кошельки; делать вклад и много другое. 
+                |Упрощенный хайп проект для быстрого взаимодействия
+                |через телеграмм. Позволяет быстро получить ответы на часто задаваемые вопросы, что улучшает качество обслуживания
+                |и повышает лояльность Ваших клиентов.
+
+            p В модуле включено:
+            ul 
+                li Телеграмм бот;
+                li Инструкция по установке;
+                li Инструкция по настройке бота.
+            p Цена: 
+                    span.blue 199$
+                    span.sale 299$
+            button.btn.btn-gren.open-modal Купить модуль

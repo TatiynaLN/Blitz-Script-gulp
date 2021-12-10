@@ -1,0 +1,15 @@
+section.faq 
+    .container 
+        .fag-top
+            .fag-top__title 
+                h1.title.title-mobile Вопрос-ответ
+                h1.title FAQ
+            .wrap-tags
+                ul.tags 
+                    li.tags__tag.tags__tag-1: a(href="#") Все
+                    li.tags__tag.tags__tag-2.active: a(href="topic-1.html") Название темы 1
+                    li.tags__tag.tags__tag-3: a(href="#") Название темы 2
+                    li.tags__tag.tags__tag-4: a(href="#") Название темы 3
+        .accordion-wrap 
+            h2.tag-title.tags__title-1 Название темы 1
+            include ./../../bem-blocks/accordion/accordion.pug

@@ -1,0 +1,68 @@
+// Переменные
+@import "./../scss/global/variables";
+
+// Миксины
+@import "./../scss/global/mixins";
+
+// Сброс дефолтных стилей браузера (дополнительный)
+@import "./../scss/global/global";
+
+// Основные стили
+@import "./../scss/global/base";
+
+// Размеры шрифтов повторяющихся элементов (h1, заголовки секций и т.д.)
+@import "./../scss/global/typography";
+
+// Общие стили для кнопок
+@import "./../scss/global/btns";
+
+// Общие стили для инпутов, чекбоксов и т.д.
+@import "./../scss/global/inputs";
+
+// Общие стили для секций (паддинги и т.д.)
+@import "./../scss/global/sections";
+
+// Плагины
+@import "./../scss/libs/swiper-bundle.min"; // Слайдер
+
+// Хедер
+@import "./../components/sections/header/header";
+
+// Футер
+@import "./../components/sections/footer/footer";
+
+// БЭМ-блоки
+@import "./../components/bem-blocks/accordion/accordion"; // Аккордион
+@import "./../components/bem-blocks/burger/burger"; // Бургер
+@import "./../components/bem-blocks/logo/logo"; // Логотип
+@import "./../components/bem-blocks/nav/nav"; // Меню
+@import "./../components/bem-blocks/updates/updates";
+@import "./../components/bem-blocks/modal/modal"; // Модалки
+@import "./../components/bem-blocks/bread-crumbs/bread-crumbs";
+@import "./../components/bem-blocks/advantages/advantages";
+@import "./../components/bem-blocks/arrow-top/arrow-top";
+@import "./../components/bem-blocks/social/social";
+@import "./../components/bem-blocks/sidebar/sidebar";
+@import "./../components/bem-blocks/slider/slider";
+
+// Секции
+@import "./../components/sections/first-screen/first-screen";
+@import "./../components/sections/about/about";
+@import "./../components/sections/advantages/advantages";
+@import "./../components/sections/advertisement/advertisement";
+
+// страница вопрос-ответ
+@import "./../components/sections/faq/faq";
+@import "./../components/sections/form/form";
+
+// страница благодарности
+@import "./../components/sections/thanks/thanks";
+
+// страница 404
+@import "./../components/sections/404/404";
+// обновления
+@import "./../components/sections/updates/updates";
+// бета
+@import "./../components/sections/left/left";
+// контакты
+@import "./../components/sections/contacts/contacts";

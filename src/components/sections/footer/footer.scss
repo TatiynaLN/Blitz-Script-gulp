@@ -1,0 +1,118 @@
+.footer {
+    background: #242f4d;
+    padding: 5.6rem 0 3.6rem;
+    @media (min-width: 1440px) {
+        padding: 7rem 0 2.4rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+        line-height: 24px;
+        color: #2a8cff;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        @media (min-width: 630px) {
+            text-align: left;
+        }
+    }
+    span {
+        font-family: "Montserrat-Regular";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.2rem;
+        line-height: 24px;
+        color: #9ea9b7;
+        margin-bottom: 0.4rem;
+        text-align: center;
+        @media (min-width: 630px) {
+            width: 100%;
+        }
+    }
+    .logo {
+        margin-bottom: 2.4rem;
+        @media (min-width: 821px) {
+            margin-right: auto;
+        }
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @media (min-width: 630px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 4rem 8rem;
+        }
+        @media (min-width: 821px) {
+            justify-content: space-between;
+            margin-bottom: 4.2rem;
+        }
+        @media (min-width: 1440px) {
+            gap: 12.5rem;
+            justify-content: flex-start;
+        }
+    }
+    &__block--box {
+        margin-bottom: 4rem;
+        @media (min-width: 630px) {
+            margin-bottom: 0;
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            @media (min-width: 630px) {
+                align-items: flex-start;
+            }
+        }
+        li {
+            position: relative;
+            display: inline-flex;
+            text-indent: initial;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 3px;
+                left: 0;
+                width: 100%;
+                height: 0.1rem;
+                background: #fff;
+                transform: scaleX(1);
+                transform-origin: left;
+                will-change: transform;
+                transition: transform 0.5s ease-out;
+            }
+            a {
+                display: block;
+                @include Montserrat-Regular; // Шрифт пунктов меню
+                color: #fff;
+                font-size: 1.6rem;
+                line-height: 24px;
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+            }
+        }
+        .item--green {
+            &::after {
+                background: #02bf7f;
+            }
+            a {
+                color: #02bf7f;
+            }
+        }
+    }
+}

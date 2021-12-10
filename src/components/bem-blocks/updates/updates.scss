@@ -1,0 +1,176 @@
+.updates {
+    width: 100%;
+    padding-top: 5.6rem;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        margin-bottom: 2rem;
+    }
+    p {
+        @media (min-width: 1024px) {
+            text-align: left;
+        }
+    }
+    a.btn {
+        @media (min-width: 411px) {
+            max-width: max-content;
+        }
+    }
+    a.btn.btn-border {
+        font-weight: 600;
+        margin: 0 auto;
+        box-shadow: none;
+        &::after,
+        &::before {
+            display: none;
+            @media (min-width: 1024px) {
+                display: block;
+            }
+        }
+        span {
+            @media (min-width: 1024px) {
+                display: none;
+            }
+        }
+        &:hover,
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+.updates-shagi {
+    width: 100%;
+    display: flex;
+    gap: 2.4rem;
+    padding-bottom: 3.2rem;
+    &__shag {
+        border-radius: 8px;
+        padding: 1.6rem;
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        text-align: left;
+        position: relative;
+        transition: all 0.8s;
+        z-index: 0;
+        overflow: hidden;
+        @media (min-width: 630px) {
+            min-width: 48.5%;
+            max-width: 48.5%;
+        }
+        @media (min-width: 1024px) {
+            min-width: 23.2%;
+            max-width: 23.2%;
+        }
+        @media (min-width: 1170px) {
+            min-width: 26.7rem;
+            max-width: 26.7rem;
+        }
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all 0.5s;
+        }
+        &::before {
+            background-color: #ffffff;
+        }
+        &::after {
+            height: 0%;
+            background-color: #2a8cff;
+            opacity: 0;
+        }
+        &:hover,
+        &:focus {
+            transition: all 0.8s;
+            &::before {
+                transition: all 0.5s;
+                opacity: 0;
+            }
+            &::after {
+                height: 100%;
+                transition: all 0.5s;
+                opacity: 1;
+            }
+            h4,
+            time,
+            p,
+            a {
+                color: #ffffff;
+                transition: all 0.8s;
+            }
+            a::after {
+                background-color: #ffffff;
+            }
+            h4::before {
+                background-image: url("../img/icons/updates1-hover.svg");
+            }
+        }
+        h4 {
+            padding-left: 3.8rem;
+            padding-top: 0.4rem;
+            max-width: 70%;
+            margin-bottom: 1.6rem;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 3.2rem;
+                height: 3.2rem;
+                top: 0;
+                left: 0;
+                background-image: url("../img/icons/updates1.svg");
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        time {
+            margin-bottom: 0.8rem;
+        }
+        p {
+            margin-bottom: 1.6rem;
+            color: #636363;
+            font-size: 1.6rem;
+            line-height: 22px;
+            @media (min-width: 1024px) {
+                line-height: 24px;
+                margin-bottom: 1.2rem;
+            }
+        }
+        a {
+            margin-top: auto;
+            @include Montserrat-Bold;
+            font-size: 1.6rem;
+            line-height: 24px;
+            color: #2a8cff;
+            display: inline;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 0.1rem;
+                background: #2a8cff;
+                transform: scaleX(1);
+                transform-origin: left;
+                will-change: transform;
+                transition: transform 0.5s ease-out;
+            }
+            &:hover,
+            &:focus {
+                &::after {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,137 @@
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 1024px) {
+        // flex: 1;
+        width: auto;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.4rem;
+
+        @media (min-width: 1024px) {
+            // width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 2rem;
+            gap: 4.1rem;
+        }
+
+        @media (min-width: 1440px) {
+            padding: 0 3rem;
+        }
+
+        li {
+            position: relative;
+            display: inline-flex;
+            text-indent: initial;
+
+            &::before {
+                display: none;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 100%;
+                left: 0;
+                width: 100%;
+                height: 0.1rem;
+                background: #fff;
+                transform: scaleX(1);
+                transform-origin: left;
+                will-change: transform;
+                transition: transform 0.5s ease-out;
+                @media (min-width: 1024px) {
+                    left: auto;
+                    right: 0;
+                    background: #242f4d;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+            }
+            a {
+                display: block;
+                @include Montserrat-Medium; // Шрифт пунктов меню
+                color: #fff;
+                @media (min-width: 1024px) {
+                    color: #242f4d;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                &::after {
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    @media (min-width: 1024px) {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
+        }
+    }
+    .item-mobile {
+        display: block;
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+    .item-desctop {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+}
+.nav ul .active {
+    &::after {
+        @media (min-width: 1024px) {
+            height: 0.2rem;
+            transform: scaleX(1);
+            width: 70%;
+            background: #02bf7f;
+        }
+    }
+    a {
+        pointer-events: none; /* делаем ссылку некликабельной */
+        cursor: default; /* устанавливаем курсор в виде стрелки */
+    }
+}
+.nav.navbar {
+    @media (min-width: 1024px) {
+        width: fit-content;
+    }
+    ul {
+        @media (min-width: 1024px) {
+            width: auto;
+            padding: 0;
+        }
+        @media (min-width: 1440px) {
+            padding: 0;
+        }
+        li {
+            @media (min-width: 1024px) {
+                display: none;
+            }
+            &::after {
+                background: #02bf7f;
+            }
+
+            a {
+                color: #02bf7f;
+            }
+        }
+        .item-desctop {
+            @media (min-width: 1024px) {
+                display: block;
+            }
+        }
+    }
+}

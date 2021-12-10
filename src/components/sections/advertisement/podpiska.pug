@@ -1,0 +1,15 @@
+section.advertisement.podpiska.p-t-b1
+    .container 
+        .advertisement__block.podpiska__block
+            .podpiska__block-left
+                h2 Подписывайтесь на нас! Будьте в курсе свежих новостей BlitzScript!
+                p Если Вы хотите получать свежие новости об акциях и об обновлениях продуктов 
+                    span.green Blitz
+                    span.blue Script
+                    |, подписывайтесь на нашу рассылку!
+            .advertisement__block-right 
+                form.form(method="post" action="#")
+                    label(for="email") 
+                        span E-mail
+                        input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                    a.btn.btn-green.btn-thanks(href="") Отправить вопрос

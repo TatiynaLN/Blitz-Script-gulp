@@ -1,0 +1,28 @@
+footer.footer
+    .container
+        include ./../../bem-blocks/logo/logo.pug
+        .footer__block
+            .footer__block--box
+                h4 О работе BlitzScript
+                ul 
+                    li: a(href="") О нашем движке
+                    li: a(href="modules.html") Модули
+                    li: a(href="beta.html") Beta-тест 5.0
+                    li.item--green: a(href="activateTheKey.html") Активировать ключ
+            .footer__block--box
+                h4 Информация
+                ul 
+                    li: a(href="") О компании
+                    li: a(href="updates.html") Новости
+                    li: a(href="") Перед покупкой
+                    li: a(href="") Партнерам
+                    li: a(href="") Документация
+            .footer__block--box
+                h4 Помощь
+                ul 
+                    li: a(href="faq.html") FAQ
+                    li: a(href="") Отзывы
+                    li: a(href="contacts.html") Контакты
+            include ./../../bem-blocks/social/social.pug
+        span © 2021 Blitz-Script
+        span Все права защищены

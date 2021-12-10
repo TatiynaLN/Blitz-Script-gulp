@@ -1,0 +1,54 @@
+/* FONTS */
+
+/* CenturyGothic */
+
+// @mixin CenturyGothic ($font-family: 'Century Gothic', $font-weight: 700, $font-style: normal, $font-display: swap) {
+//     font-family: $font-family;
+//     font-weight: $font-weight;
+//     font-style: $font-style;
+//     font-display: $font-display;
+// }
+
+// @include Montserrat-Medium;
+@mixin Montserrat-Medium(
+    $font-family: "Montserrat-Medium",
+    $font-weight: 500,
+    $font-style: normal,
+    $font-display: swap
+) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: $font-display;
+}
+// @include Montserrat-Regular;
+@mixin Montserrat-Regular(
+    $font-family: "Montserrat-Regular",
+    $font-weight: 400,
+    $font-style: normal,
+    $font-display: swap
+) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: $font-display;
+}
+// @include Montserrat-SemiBold;
+@mixin Montserrat-SemiBold(
+    $font-family: "Montserrat-SemiBold",
+    $font-weight: 600,
+    $font-style: normal,
+    $font-display: swap
+) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: $font-display;
+}
+// @include Montserrat-Bold;
+@mixin Montserrat-Bold($font-family: "Montserrat-Bold", $font-weight: 600, $font-style: normal, $font-display: swap) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: $font-display;
+}

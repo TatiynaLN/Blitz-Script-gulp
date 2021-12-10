@@ -1,0 +1,47 @@
+section.contacts.section-form.fag-form.p-t-b1
+    .container 
+        h1 Контакты
+        .contacts__wrapper
+
+            .social.socials
+                    ul
+                        li 
+                            a.social-icons(href="mailto:mailmail@mail.ru" target="_blank") 
+                                p.social-icons--img
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/mail2.svg", alt="mail")
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/mail2-hover.svg", alt="mail")
+                                span mailmail@mail.ru
+                        li
+                            a.social-icons(href="https://vk.com/" target="_blank")
+                                p.social-icons--img
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/vk2.svg", alt="vk")
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/vk2-hover.svg", alt="vk")
+                                span mailmail@mail.ru
+                        li
+                            a.social-icons(href="https://telegram.me/nik_instagram" target="_blank")
+                                p.social-icons--img
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/telegram2.svg", alt="telegram")
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/telegram2-hover.svg", alt="telegram")
+                                span nik_instagram
+                        li
+                            a.social-icons(href="http://facebook.com/" target="_blank")
+                                p.social-icons--img
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/Facebook2.svg", alt="Facebook")
+                                    img(src="./wp-content/themes/Blitz-Script/assets/img/icons/Facebook2-hover.svg", alt="Facebook")
+                                span mailmail@mail.ru
+            .fag-form__wrap
+                h2 С нами легко связаться!
+                p Информация о том, что мы ответим на интересующие Вас вопросы.
+                form.form(method="post" action="#")
+                    label(for="login") 
+                        span Логин
+                        input._req#login(type="text" name='user-login' placeholder="Введите Ваш логин" required="required")
+                    label(for="email") 
+                        span E-mail
+                        input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                    label(for="text") 
+                        span Текст сообщения
+                        textarea#text(name="quiz-message" placeholder="Напишите Ваш вопрос" required="required")
+                    div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+                    a.btn.btn-green.btn-thanks(href="") Отправить вопрос
+                

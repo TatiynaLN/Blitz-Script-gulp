@@ -1,0 +1,41 @@
+.thanks.p-t-b {
+    @media (min-width: 1024px) {
+        padding-top: 4.8rem;
+        padding-bottom: 13.2rem;
+    }
+}
+.thanks__wrapper {
+    width: 100%;
+    h1,
+    h2,
+    p {
+        text-align: left;
+    }
+    .title {
+        display: block;
+        @media (max-width: 1024px) {
+            margin-bottom: 2rem;
+        }
+    }
+    h1,
+    h2 {
+        @media (min-width: 1024px) {
+            max-width: 55%;
+        }
+    }
+    p {
+        @media (min-width: 1024px) {
+            max-width: 35%;
+        }
+    }
+    .social {
+        margin-top: 1.6rem;
+        margin-bottom: 6.4rem;
+        @media (min-width: 1440px) {
+            margin-left: 0;
+        }
+        li {
+            background: #02bf7f;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.first-screen {
+    padding: 5.4rem 0;
+    height: calc(100vh - 12.6rem);
+    @media (min-width: 1440px) {
+        padding-top: 3rem;
+    }
+    &__wrap {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title {
+        display: none;
+        text-align: center;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+        span {
+            &:first-child {
+                color: #02bf7f;
+            }
+            &:last-child {
+                color: #2a8cff;
+            }
+        }
+    }
+    .title-mobile {
+        margin-bottom: 7.3rem;
+    }
+    p {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+            width: 100%;
+            max-width: 59rem;
+        }
+        span {
+            color: #2a8cff;
+        }
+    }
+    .button-wrapper {
+        .btn.btn-green {
+            @media (min-width: 1440px) {
+                padding: 1.2rem 3.2rem;
+            }
+        }
+        .btn-border {
+            @media (min-width: 1440px) {
+                padding: 1.2rem 1.7rem;
+            }
+        }
+    }
+}
+.button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 2.4rem;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+    .btn {
+        @media (min-width: 411px) {
+            max-width: max-content;
+            display: block;
+        }
+    }
+    .btn-green {
+        box-shadow: 0px 4px 4px rgba(18, 107, 75, 0.13);
+        color: #02bf7f;
+        @media (min-width: 1024px) {
+            color: #fff;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        &:hover,
+        &:focus {
+            color: #fff;
+        }
+    }
+    .btn-mobile {
+        @media (min-width: 1024px) {
+            display: none;
+        }
+    }
+}
+.title {
+    display: none;
+    text-align: center;
+    @media (min-width: 1024px) {
+        display: block;
+    }
+    span.green,
+    span.title--green {
+        color: #02bf7f;
+    }
+    span.blue,
+    span.title--blue {
+        color: #2a8cff;
+    }
+}
+span.green {
+    color: #02bf7f;
+}
+span.blue {
+    color: #2a8cff;
+}

@@ -1,0 +1,29 @@
+section.faq 
+    .container 
+        .fag-top
+            .fag-top__title 
+                h1.title.title-mobile Вопрос-ответ
+                h1.title FAQ
+            .wrap-tags
+                ul.tags 
+                    li.tags__tag.tags__tag-1.active: a(href="#") Все
+                    li.tags__tag.tags__tag-2: a(href="topic-1.html") Название темы 1
+                    li.tags__tag.tags__tag-3: a(href="#") Название темы 2
+                    li.tags__tag.tags__tag-4: a(href="#") Название темы 3
+        .accordion-wrap 
+            a.tag-title.tags__title-1(href="topic-1.html") Название темы 1
+            include ./../../bem-blocks/accordion/accordion.pug
+            a.tag-title.tags__title-2(href="#") Название темы 2
+            include ./../../bem-blocks/accordion/accordion2.pug
+            a.tag-title.tags__title-3(href="#") Название темы 3
+            .accordion
+                div.accordion-block
+                    h3 Формулировка вопроса по этой теме
+                    .accordion-block__box
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, similique.
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, similique.
+                div.accordion-block
+                    h3 Формулировка вопроса по этой теме
+                    .accordion-block__box
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, similique.
+                            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, similique.

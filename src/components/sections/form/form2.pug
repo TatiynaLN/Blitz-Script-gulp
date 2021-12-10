@@ -1,0 +1,10 @@
+section.section-form.decoration-form
+    .container 
+        .fag-form__wrap
+            h1.title  Оформите подписку для скачивания новой версии движка
+            form.form(method="post" action="#")
+                label(for="email") 
+                    span Ваш E-mail
+                    input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+                a.btn.btn-green.btn-thanks(href="gratitude.html") Оформить подписку

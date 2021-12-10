@@ -1,0 +1,8 @@
+.logo {
+    width: 15.652rem;
+}
+.logo-s {
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
