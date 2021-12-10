@@ -1,0 +1,17 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Оформите подписку';
+    - let breadcrumbsHomepage = 'Главная » ';
+    - let breadcrumbsText_1 = 'Оформите подписку';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        include ./../components/sections/form/form2.pug
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

@@ -1,0 +1,37 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Активируйте ключ';
+    - let breadcrumbsHomepage = 'Главная » ';
+    - let breadcrumbsText_1 = 'Активируйте ключ';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        section.section-form.decoration-form
+            .container 
+                .fag-form__wrap
+                    h1.title Активируйте ключ продукта
+                    form.form(method="post" action="#")
+                        label(for="domain") 
+                            span Ваш Домен 
+                            input._req#domain(type="text" name="user-domain" placeholder="Введите домен (например: domain_name.ru)" required="required")
+                        label(for="email") 
+                            span Ваш E-mail
+                            input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                        label(for="key") 
+                            .hints
+                                span Введите ключ
+                                .hint 
+                                    span ?
+                                    p Пояснение, что это за ключ и где его можно получить
+                            input._req#key(type="text" name="user-key" placeholder="_ _ _ _ - _ _ _ _ - _ _ _ _ - _ _ _ _" required="required")
+                        div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+                        a.btn.btn-green.btn-thanks(href="") Активировать ключ
+
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

@@ -1,0 +1,20 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Название темы 1';
+    - let breadcrumbsHomepage = 'Главная » ';
+    - let breadcrumbsText_1 = 'Вопрос-ответ » ';
+    - let breadcrumbsText_2 = 'Название темы 1';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+    - let breadcrumbsLink_1 = 'faq.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        include ./../components/sections/faq/faq2.pug
+        include ./../components/sections/form/form.pug
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

@@ -1,0 +1,20 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Blitz-Script';
+    - let breadcrumbsText_1 = 'Главная';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        .banner
+            include ./../components/sections/header/header.pug
+            include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+            include ./../components/sections/first-screen/first-screen.pug
+        include ./../components/sections/about/about.pug
+        include ./../components/sections/advantages/advantages.pug
+        include ./../components/sections/advertisement/advertisement.pug
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

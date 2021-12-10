@@ -1,0 +1,27 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Проверить лицензию';
+    - let breadcrumbsHomepage = 'Главная » ';
+    - let breadcrumbsText_1 = 'Проверить лицензию';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        section.section-form.decoration-form
+            .container 
+                .fag-form__wrap
+                    h1.title  Проверьте наличие лицензии у домена
+                    form.form(method="post" action="#")
+                        label(for="domain") 
+                            span Ваш Домен
+                            input._req#domain(type="text" name="user-domain" placeholder="Введите домен (например: domain_name.ru)" required="required")
+                        div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+                        a.btn.btn-green.btn-thanks(href="") Проверить лицензию
+
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

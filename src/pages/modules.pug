@@ -1,0 +1,29 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Модули';
+    - let breadcrumbsHomepage = 'Главная » ';
+    - let breadcrumbsText_1 = 'Модули';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        section.main-section.p-t-b1
+            .container 
+                .wrap
+                    h1 Модули
+                    h2 Заголовок про модули
+                    p Уточняющая информация про движок. Здесь пользователю
+                        |рассказывается достаточно подробная информация
+                        |о движке и его преимуществах. Добавлена возможность
+                        |выбора сервиса для перевода (google, yandex), перевод
+                        |админки, fix курсов и уведомлений.
+            .cnt
+                include ./../components/bem-blocks/slider/slider.pug
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/modal/modal.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

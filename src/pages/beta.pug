@@ -1,0 +1,17 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Beta-тест 5.0';
+    - let breadcrumbsText_1 = 'Главная';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        include ./../components/sections/left/left.pug
+        include ./../components/sections/advantages/advantages2.pug
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug

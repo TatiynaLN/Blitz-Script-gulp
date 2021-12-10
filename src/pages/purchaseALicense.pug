@@ -1,0 +1,55 @@
+extends ./../layouts/main
+
+block variables
+    - let pageTitle = 'Приобретите лицензию';
+    - let breadcrumbsHomepage = 'Главная » ';
+    - let breadcrumbsText_1 = 'Приобретите лицензию';
+
+    - let breadcrumbsHomepageLink = 'index.html';
+
+block content
+    .wrap-feedback
+    .wrapper#top
+        include ./../components/sections/header/header.pug
+        include ./../components/bem-blocks/bread-crumbs/bread-crumbs.pug
+        section.section-form.decoration-form
+            .container 
+                .fag-form__wrap
+                    h1.title  Приобретите лицензию на домен всего за 
+                        span.title--green 25$ 
+                        |в месяц.
+                    form.form.form2(method="post" action="#")
+                        label(for="domain") 
+                            span Ваш Домен
+                            input._req#domain(type="text" name="user-domain" placeholder="Введите домен (например: domain_name.ru)" required="required")
+                        label(for="email") 
+                            span Ваш E-mail
+                            input._req#email(type="email" name="user-email" placeholder="Введите Ваш e-mail" required="required")
+                        label.label-select(for="tip") Тип лицензии
+                        .select-wrapper
+                            select(required="required").turnintodropdown
+                                    option(value="") Выберите тип лицензии
+                                    option Тип лицензии 1
+                                    option Тип лицензии 2
+                        label.label-select(for="period") Период
+                        .select-wrapper
+                            select(required="required").turnintodropdown
+                                    option(value="") Выберите срок действия
+                                    option 2 месяца
+                                    option 3 месяца
+                                    option 4 месяца
+                                    option 5 месяца
+                        label.label-select(for="platej") Платежная система
+                        .select-wrapper.select-wrapper--bottom
+                            select(required="required").turnintodropdown
+                                    option(value="") Выберите платежную систему
+                                    option Платежная система 1
+                                    option Платежная система 2
+                        p Лицензия распространяется на 1 домен.
+                        p Продолжительность лицензии - 1 месяц.
+                        
+                        div.g-recaptcha(data-sitekey="КЛЮЧ_САЙТА")
+                        a.btn.btn-green.btn-thanks(href="") Купить лицензию
+
+        include ./../components/sections/footer/footer.pug
+    include ./../components/bem-blocks/arrow-top/arrow-top.pug
